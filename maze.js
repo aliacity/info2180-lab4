@@ -7,7 +7,7 @@ document.getElementById("boundary1").addEventListener("mouseover", function lose
 	}
 )
 
-
+//exercise 2
 for ( var x = 0; x < document.getElementsByClassName("boundary").length - 1; x++)
 		{
 
@@ -32,3 +32,21 @@ for ( var x = 0; x < document.getElementsByClassName("boundary").length - 1; x++
 		}
 
 //Excercise 3
+
+let mazeend = document.getElementById("end");
+mazeend.addEventListener("mouseover", function end()
+		{
+			if (document.getElementsByClassName("youlose").length === 0)
+			{
+
+				let wintext = document.createElement("h2");
+				wintext.textContent = "You Win!";
+				document.body.append(wintext);
+				var status = document.createAttribute("id");
+				status.value = "status";
+				wintext.setAttributeNode(status);
+
+			}
+		}
+
+	)
