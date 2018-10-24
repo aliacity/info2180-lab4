@@ -1,3 +1,5 @@
+// 1
+
 window.onload;
 
 document.getElementById("boundary1").addEventListener("mouseover", function loser()
@@ -7,7 +9,7 @@ document.getElementById("boundary1").addEventListener("mouseover", function lose
 	}
 )
 
-//exercise 2
+// 2
 if (document.getElementsByClassName("youlose").length === 0){
 for ( var x = 0; x < document.getElementsByClassName("boundary").length - 1; x++)
 		{
@@ -32,7 +34,7 @@ for ( var x = 0; x < document.getElementsByClassName("boundary").length - 1; x++
 					})
 		}
 }
-//Excercise 3
+// 3
 
 let mazeend = document.getElementById("end");
 mazeend.addEventListener("mouseover", function end()
@@ -52,7 +54,7 @@ mazeend.addEventListener("mouseover", function end()
 
 	)
 
-	//Excercise 4
+	//4
 
 	let mazereset = document.getElementById("start");
 	mazereset.addEventListener("click", function reset()
@@ -78,7 +80,7 @@ mazeend.addEventListener("mouseover", function end()
 
 	)
 
-	//last exercise
+	//done
 
 	let loseGame = document.getElementById("maze");
 	loseGame.addEventListener("mouseleave", function endGame()
@@ -95,7 +97,7 @@ mazeend.addEventListener("mouseover", function end()
 							    var status = document.createAttribute("id");
 								status.value = "status";
 								lose.setAttributeNode(status);
-	
+
 							}
 
 		)
