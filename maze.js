@@ -8,6 +8,7 @@ document.getElementById("boundary1").addEventListener("mouseover", function lose
 )
 
 //exercise 2
+if (document.getElementsByClassName("youlose").length === 0){
 for ( var x = 0; x < document.getElementsByClassName("boundary").length - 1; x++)
 		{
 
@@ -30,7 +31,7 @@ for ( var x = 0; x < document.getElementsByClassName("boundary").length - 1; x++
 
 					})
 		}
-
+}
 //Excercise 3
 
 let mazeend = document.getElementById("end");
@@ -64,13 +65,37 @@ mazeend.addEventListener("mouseover", function end()
 		 		i--;
 		    }
 
-		    	// When the user clicks the start icon, this code, it removes the status either you win or you lose
-		   if (document.getElementsByTagName("div").innerHTML === `<h2 id = "status"> You Win </h2>` || `<h2 id = "status"> You Lose </h2>`)
-		   			{
-		   				var removeSatus = document.getElementById("status");
-		   				removeSatus.parentNode.removeChild(removeSatus);
-		   			}
+
+					if (document.getElementsByTagName("div").innerHTML === `<h2 id = "status"> You Win </h2>` || `<h2 id = "status"> You Lose </h2>`)
+	 		   			{
+	 		   				var removeSatus = document.getElementById("status");
+	 		   				removeSatus.parentNode.removeChild(removeSatus);
+	 		   			}
+		   	// When the user clicks the start icon, this code, it removes the status either you win or you lose
+
 
 		}
 
-	)	
+	)
+
+	//last exercise
+
+	let loseGame = document.getElementById("maze");
+	loseGame.addEventListener("mouseleave", function endGame()
+						{
+							for (var n = 0; n < document.getElementsByClassName("boundary").length - 1; n++)
+							{
+
+							document.querySelectorAll("div.boundary")[n].classList.add("youlose");
+							}
+
+							let lose = document.createElement("h2");
+								lose.textContent = "You Lose!";
+							    document.body.append(lose);
+							    var status = document.createAttribute("id");
+								status.value = "status";
+								lose.setAttributeNode(status);
+	
+							}
+
+		)
