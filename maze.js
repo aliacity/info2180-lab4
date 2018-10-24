@@ -82,8 +82,8 @@ mazeend.addEventListener("mouseover", function end()
 
 	//done
 
-	let loseGame = document.getElementById("maze");
-	loseGame.addEventListener("mouseleave", function endGame()
+	let cheater = document.getElementById("maze");
+	cheater.addEventListener("mouseleave", function gameover()
 						{
 							for (var n = 0; n < document.getElementsByClassName("boundary").length - 1; n++)
 							{
